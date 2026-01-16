@@ -52,7 +52,7 @@ export {};
 	} catch (e) {
 		if (sessionStorage.getItem("canUseTs") === "false") {
 			console.log("serviceWorker加载失败: ", e);
-			alert(globalText.SERVICE_WORKER_LOAD_FAILED);
+			// alert(globalText.SERVICE_WORKER_LOAD_FAILED);
 		} else {
 			sessionStorage.setItem("canUseTs", "false");
 			window.location.reload();

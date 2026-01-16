@@ -7375,7 +7375,7 @@ export class Library {
 				},
 				wss_mode: {
 					name: "使用WSS协议",
-					init: false,
+					init: true,
 					intro: "在用户填写的IP地址没有直接指定使用WS/WSS协议的情况下，默认使用WSS协议，而非WS协议来连接到联机服务器。<br>请不要轻易勾选此项！",
 					onclick(bool) {
 						if (bool && !confirm("此为开发者选项，开启后将无法直接联机。您确定要开启WSS模式吗？")) {
@@ -7392,7 +7392,7 @@ export class Library {
 				},
 				check_versionLocal: {
 					name: "禁止不同版本玩家进房",
-					init: true,
+					init: false,
 					intro: "禁止与自己版本不同的玩家进入房间",
 				},
 				check_extension: {
@@ -12978,7 +12978,7 @@ export class Library {
 								ui.window.removeChild(input);
 								if (result || input.value.length > 0) {
 									read(input.value);
-								} else if (confirm("是否输入邀请链接以加入房间？")) {
+								} else if (false) {
 									var text = prompt("请输入邀请链接");
 									if (typeof text == "string" && text.length > 0) {
 										read(text);

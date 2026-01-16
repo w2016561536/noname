@@ -191,7 +191,7 @@ export default () => {
 						ui.window.removeChild(input);
 						if (result || input.value.length > 0) {
 							read(input.value);
-						} else if (confirm("是否输入邀请链接以进入联机地址和房间？")) {
+						} else if (false) {
 							ced = true;
 							var text = prompt("请输入邀请链接");
 							if (typeof text == "string" && text.length > 0) {
